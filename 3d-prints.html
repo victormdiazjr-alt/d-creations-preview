@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>3D Print Studio — D Creations</title>
+  <meta name="description" content="Diseño, modelado e impresión 3D personalizada con evaluación guiada.">
+  <link rel="stylesheet" href="assets/site-pages.css"><link rel="stylesheet" href="assets/product-studio.css">
+</head>
+<body>
+<header class="page-topbar"><div class="page-shell page-brand"><a href="preview.html"><img src="assets/d-creations-logo-transparent.png" alt="D Creations"></a><nav class="page-menu" aria-label="Navegación principal"><a href="preview.html#products">Productos</a><a href="services.html">Servicios</a><a href="about.html">About Us</a><a href="contact.html">Contact Us</a></nav></div></header>
+<main class="studio-main"><div class="studio-shell">
+  <section class="studio-intro studio-panel product-studio-hero dark-studio-hero">
+    <div><p class="eyebrow">3D Print Studio</p><h1>La pieza que imaginas empieza aquí.</h1><p>Desde una foto o idea hasta un archivo listo para imprimir. Te ayudamos a definir, diseñar y fabricar un proyecto claro.</p><div class="promise-row"><span>Diseño 3D disponible</span><span>Evaluación humana</span><span>Producción interna</span></div><a class="primary-button light-button" href="#project-builder">Evaluar mi idea</a><small class="hero-footnote">No necesitas un archivo 3D para comenzar.</small></div>
+    <img src="assets/product-tile-3d-prints-h2c-h2d-studio-v13.png" alt="Estudio de impresión 3D de D Creations">
+  </section>
+
+  <section class="experience-section compact-section">
+    <div class="section-heading"><p class="eyebrow">Elige tu punto de partida</p><h2>¿Qué tienes hoy?</h2><p>La ruta cambia según la madurez del proyecto, no según cuánto sabes de impresión 3D.</p></div>
+    <div class="path-grid path-grid-three">
+      <button class="path-card" type="button" data-print-route="idea"><span>01 · IDEA</span><h3>Tengo una idea o foto</h3><p>Definimos forma, uso y escala contigo.</p><b>Necesita diseño 3D →</b></button>
+      <button class="path-card featured-path" type="button" data-print-route="model"><span>02 · MODELO</span><h3>Tengo un archivo 3D</h3><p>Revisamos dimensiones, producción y ajustes.</p><b>Listo para evaluación →</b></button>
+      <button class="path-card" type="button" data-print-route="modify"><span>03 · CAMBIO</span><h3>Quiero modificar algo</h3><p>Adaptamos texto, tamaño o función cuando sea viable.</p><b>Necesita revisión →</b></button>
+    </div>
+  </section>
+
+  <section class="experience-section">
+    <div class="section-heading"><p class="eyebrow">Proyectos que resolvemos</p><h2>De lo útil a lo memorable.</h2><p>Selecciona una categoría en el estudio para contarnos mejor el resultado que buscas.</p></div>
+    <div class="category-showcase"><div><b>Organización</b><span>Stands, soportes y piezas para ordenar espacios.</span></div><div><b>Gaming</b><span>Bases, displays y accesorios personalizados.</span></div><div><b>Decoración</b><span>Lámparas, letreros y objetos con presencia.</span></div><div><b>Regalos</b><span>Piezas únicas creadas alrededor de una persona.</span></div><div><b>Soluciones</b><span>Repuestos y componentes sujetos a evaluación.</span></div><div><b>Series pequeñas</b><span>Varias unidades de una configuración confirmada.</span></div></div>
+  </section>
+
+  <form id="project-builder" class="workbench has-studio-sidebar" data-product-builder="print" novalidate>
+    <div class="workbench-head"><div><p class="eyebrow">Project brief interactivo</p><h2>Construye una solicitud útil</h2><p>Completa lo que sabes. El sistema te muestra qué información ayudará a cotizar con menos idas y vueltas.</p></div><div class="progress-pill"><span data-progress>1</span> de 4</div></div>
+
+    <aside class="studio-sidecard readiness-card">
+      <span class="preview-badge">Preparación del proyecto</span>
+      <div class="readiness-score"><strong data-readiness-score>25%</strong><span>listo para evaluar</span></div>
+      <div class="readiness-track"><i data-readiness-bar></i></div>
+      <ul class="readiness-list"><li data-ready="purpose">Describe el propósito</li><li data-ready="size">Añade dimensiones</li><li data-ready="file">Comparte una referencia</li><li data-ready="quantity">Confirma cantidad</li></ul>
+      <div class="next-step"><span>Próximo paso recomendado</span><strong data-next-step>Cuéntanos qué debe hacer la pieza.</strong></div>
+    </aside>
+
+    <section class="builder-card">
+      <div class="builder-heading"><span class="number">1</span><div><h2>Resultado que buscas</h2><p>Selecciona la categoría más cercana; no tiene que ser perfecta.</p></div></div>
+      <div class="visual-choice-grid choice-six">
+        <label class="visual-choice"><input type="radio" name="print-type" value="Organización" checked><span><b>Organización</b><small>Stand, soporte o base</small></span></label>
+        <label class="visual-choice"><input type="radio" name="print-type" value="Gaming"><span><b>Gaming</b><small>Display o accesorio</small></span></label>
+        <label class="visual-choice"><input type="radio" name="print-type" value="Decoración"><span><b>Decoración</b><small>Lámpara o pieza visual</small></span></label>
+        <label class="visual-choice"><input type="radio" name="print-type" value="Regalo"><span><b>Regalo</b><small>Personalizado para alguien</small></span></label>
+        <label class="visual-choice"><input type="radio" name="print-type" value="Solución funcional"><span><b>Solución</b><small>Repuesto o necesidad</small></span></label>
+        <label class="visual-choice"><input type="radio" name="print-type" value="Otro"><span><b>Otro</b><small>Una idea diferente</small></span></label>
+      </div>
+    </section>
+
+    <section class="builder-card">
+      <div class="builder-heading"><span class="number">2</span><div><h2>Función, escala y cantidad</h2><p>Estas variables determinan la ruta de diseño y producción.</p></div></div>
+      <div class="field-grid">
+        <div class="field field-wide"><label for="print-description">¿Qué debe hacer o representar?</label><textarea id="print-description" data-readiness-input="purpose" placeholder="Describe dónde se usará, qué debe sostener, mostrar, organizar o representar."></textarea></div>
+        <div class="field"><label for="print-size">Dimensiones aproximadas</label><input id="print-size" data-readiness-input="size" placeholder="Ej. 8″ × 5″ × 3″" data-summary-source="print-size"><small>Una aproximación basta para empezar.</small></div>
+        <div class="field"><label for="print-qty">Cantidad</label><input id="print-qty" data-readiness-input="quantity" type="number" min="1" value="1" data-summary-source="print-qty"></div>
+      </div>
+    </section>
+
+    <section class="builder-card">
+      <div class="builder-heading"><span class="number">3</span><div><h2>Archivo o referencia</h2><p>Sube lo que tengas: una foto, sketch, medidas o modelo 3D.</p></div></div>
+      <div class="dropzone compact-dropzone"><div><strong>Arrastra o selecciona tus archivos</strong><p>Imágenes, STL, 3MF u OBJ. La referencia se revisará antes de cotizar.</p><input type="file" accept="image/*,.stl,.3mf,.obj" data-file-input data-preview="print-file-preview" data-readiness-file></div></div>
+      <div id="print-file-preview" class="file-preview" aria-live="polite"></div>
+      <div class="visual-choice-grid choice-three followup-fields">
+        <label class="visual-choice"><input type="radio" name="design-state" value="Necesito diseño desde cero" checked><span><b>Idea o foto</b><small>Necesito diseño 3D</small></span></label>
+        <label class="visual-choice"><input type="radio" name="design-state" value="Necesito modificar un modelo"><span><b>Modelo para cambiar</b><small>Necesito una adaptación</small></span></label>
+        <label class="visual-choice"><input type="radio" name="design-state" value="Tengo archivo listo"><span><b>Archivo listo</b><small>Necesito validar y producir</small></span></label>
+      </div>
+    </section>
+
+    <section class="builder-card">
+      <div class="builder-heading"><span class="number">4</span><div><h2>Prioridades del proyecto</h2><p>Ayúdanos a entender qué importa más para la pieza final.</p></div></div>
+      <fieldset class="priority-picker"><legend>Prioridad principal</legend><div class="choice-row choice-three"><div class="choice"><input id="priority-look" type="radio" name="print-priority" value="Apariencia" checked><label for="priority-look">Apariencia</label></div><div class="choice"><input id="priority-function" type="radio" name="print-priority" value="Función"><label for="priority-function">Función</label></div><div class="choice"><input id="priority-budget" type="radio" name="print-priority" value="Presupuesto"><label for="priority-budget">Presupuesto</label></div></div></fieldset>
+      <div class="field-grid followup-fields"><div class="field"><label for="print-colors">Colores preferidos</label><input id="print-colors" placeholder="Ej. negro, azul y blanco"></div><div class="field"><label for="print-date">Fecha deseada</label><input id="print-date" type="date"><small>Se confirma después de evaluar el proyecto.</small></div></div>
+      <div class="live-summary compact-summary"><div><span>Proyecto</span><strong data-summary="print-type">Organización</strong></div><div><span>Diseño</span><strong data-summary="design-state">Necesito diseño desde cero</strong></div><div><span>Dimensiones</span><strong data-summary="print-size">Por definir</strong></div><div><span>Cantidad</span><strong data-summary="print-qty">1</strong></div></div>
+      <div class="quote-panel"><div><span>Cómo se cotiza</span><strong>Diseño + pieza + producción</strong></div><p>Revisamos complejidad, escala, material, tiempo, acabado y cantidad. No mostramos un precio artificial antes de entender la pieza.</p></div>
+      <button class="primary-button full-button" type="button" data-prototype-submit>Enviar para evaluación</button><p class="prototype-status" data-prototype-status aria-live="polite"></p>
+    </section>
+  </form>
+
+  <section class="experience-section comparison-section"><div class="section-heading"><p class="eyebrow">Qué sucede después</p><h2>Una ruta clara de idea a objeto.</h2></div><div class="value-strip"><div><b>01</b><strong>Viabilidad</strong><span>Revisamos uso, escala y archivo.</span></div><div><b>02</b><strong>Alcance</strong><span>Confirmamos diseño, precio y tiempo.</span></div><div><b>03</b><strong>Producción</strong><span>Fabricamos la configuración aprobada.</span></div></div></section>
+  <section class="faq-section"><div class="section-heading"><p class="eyebrow">Preguntas frecuentes</p><h2>Antes de enviar tu idea</h2></div><details><summary>¿Necesito un archivo 3D?</summary><p>No. Puedes comenzar con una descripción, foto, dibujo o referencia.</p></details><details><summary>¿Por qué no aparece un precio instantáneo?</summary><p>El costo depende del trabajo de diseño, dimensiones, material, tiempo de impresión, acabado y cantidad. Revisarlo primero evita una cotización engañosa.</p></details><details><summary>¿Todos los proyectos se pueden fabricar?</summary><p>Cada proyecto se evalúa. Te explicaremos cualquier límite o ajuste necesario antes de cotizar.</p></details></section>
+</div></main>
+<footer class="site-footer"><div class="footer-accent" aria-hidden="true"></div><div class="footer-inner"><div class="footer-brand"><a class="footer-wordmark" href="preview.html">D Creations</a><p>Diseñamos, imprimimos y fabricamos piezas personalizadas que convierten ideas en algo real.</p><a class="footer-cta" href="contact.html">Comienza tu proyecto <span aria-hidden="true">→</span></a></div><nav class="footer-links"><h2>Productos</h2><a href="labels.html">Labels</a><a href="nfc-keychains.html">NFC Keychains</a><a href="qr-codes.html">QR Codes</a><a href="3d-tags.html">3D Tags</a><a href="3d-prints.html">3D Prints</a><a href="stickers.html">Stickers</a></nav><nav class="footer-links"><h2>D Creations</h2><a href="services.html">Servicios creativos</a><a href="about.html">About Us</a><a href="contact.html">Contact Us</a></nav></div><div class="footer-bottom"><span>© 2026 D Creations</span><span class="footer-origin">Diseñado y producido en Puerto Rico</span><a href="contact.html">Hablemos</a></div></footer>
+<script src="assets/product-studio.js"></script>
+</body></html>

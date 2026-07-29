@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sticker Studio — D Creations</title>
+  <meta name="description" content="Sube tu arte, elige formato, tamaño y acabado, y revisa tu solicitud de Stickers personalizados.">
+  <link rel="stylesheet" href="assets/site-pages.css"><link rel="stylesheet" href="assets/product-studio.css">
+</head>
+<body>
+<header class="page-topbar"><div class="page-shell page-brand"><a href="preview.html"><img src="assets/d-creations-logo-transparent.png" alt="D Creations"></a><nav class="page-menu" aria-label="Navegación principal"><a href="preview.html#products">Productos</a><a href="services.html">Servicios</a><a href="about.html">About Us</a><a href="contact.html">Contact Us</a></nav></div></header>
+<main class="studio-main"><div class="studio-shell">
+  <section class="studio-intro studio-panel product-studio-hero sticker-studio-hero">
+    <div><p class="eyebrow">Sticker Studio</p><h1>Tu arte merece un corte perfecto.</h1><p>Sube tu diseño, prueba la presentación y prepara una solicitud clara. Nosotros ajustamos el archivo y te enviamos la prueba antes de producir.</p><div class="promise-row"><span>Die-cut, kiss-cut o hoja</span><span>Prueba visual</span><span>Diseño asistido disponible</span></div><a class="primary-button" href="#sticker-builder">Probar mi diseño</a></div>
+    <img src="assets/product-tile-stickers-v3.webp" alt="Stickers personalizados de D Creations">
+  </section>
+
+  <section class="experience-section compact-section">
+    <div class="section-heading"><p class="eyebrow">El formato cambia la experiencia</p><h2>Escoge cómo quieres usarlos.</h2><p>Compara el corte y el uso recomendado antes de configurar tu orden.</p></div>
+    <div class="format-grid interactive-formats">
+      <button class="format-card is-active" type="button" data-sticker-preset="Die-cut"><div class="cut-demo die-cut-demo">D</div><h3>Die-cut</h3><p>Cada Sticker sigue la silueta exterior del arte.</p><em>Mejor para entregar o vender</em></button>
+      <button class="format-card" type="button" data-sticker-preset="Kiss-cut"><div class="cut-demo kiss-cut-demo"><span>D</span></div><h3>Kiss-cut</h3><p>El corte queda dentro de un respaldo más amplio.</p><em>Mejor para despegar fácilmente</em></button>
+      <button class="format-card" type="button" data-sticker-preset="Hoja de Stickers"><div class="cut-demo sheet-demo"><i>D</i><i>★</i><i>♥</i></div><h3>Hoja</h3><p>Varias copias o diseños organizados juntos.</p><em>Mejor para colecciones</em></button>
+    </div>
+  </section>
+
+  <form id="sticker-builder" class="workbench has-studio-sidebar" data-product-builder="sticker" novalidate>
+    <div class="workbench-head"><div><p class="eyebrow">Configurador visual</p><h2>Construye tu Sticker</h2><p>El preview te ayuda a decidir. La prueba final confirma tamaño, contorno y arte antes de producción.</p></div><div class="progress-pill"><span data-progress>1</span> de 4</div></div>
+
+    <aside class="studio-sidecard sticker-preview-card">
+      <span class="preview-badge">Preview en vivo</span>
+      <div class="digital-preview" data-sticker-preview>
+        <div class="sticker-preview-sheet"><div class="sticker-shape-preview">Tu arte</div></div>
+      </div>
+      <div class="art-health"><span>Archivo</span><strong data-art-health>Sube tu arte</strong><small data-art-dimensions>PNG transparente recomendado</small></div>
+      <div class="preview-meta"><span>Formato</span><strong data-sticker-format-preview>Die-cut</strong></div>
+      <div class="preview-meta"><span>Acabado</span><strong data-sticker-finish-preview>Matte</strong></div>
+    </aside>
+
+    <section class="builder-card">
+      <div class="builder-heading"><span class="number">1</span><div><h2>Sube tu arte</h2><p>Usa el archivo de mayor resolución disponible. El sistema mostrará sus dimensiones reales en píxeles.</p></div></div>
+      <div class="dropzone"><div><strong>Arrastra o selecciona tu diseño</strong><p>PNG con transparencia es ideal. También puedes usar JPG o WebP.</p><input type="file" accept="image/*" data-file-input data-preview="sticker-file-preview"></div></div>
+      <div id="sticker-file-preview" class="file-preview hidden-file-preview" aria-live="polite"></div>
+    </section>
+
+    <section class="builder-card">
+      <div class="builder-heading"><span class="number">2</span><div><h2>Escoge la presentación</h2><p>El preview cambia para mostrar cómo se entregará la pieza.</p></div></div>
+      <div class="visual-choice-grid choice-three">
+        <label class="visual-choice"><input type="radio" name="sticker-format" value="Die-cut" checked><span><b>Die-cut</b><small>Contorno individual</small></span></label>
+        <label class="visual-choice"><input type="radio" name="sticker-format" value="Kiss-cut"><span><b>Kiss-cut</b><small>Respaldo alrededor</small></span></label>
+        <label class="visual-choice"><input type="radio" name="sticker-format" value="Hoja de Stickers"><span><b>Hoja</b><small>Varias piezas juntas</small></span></label>
+      </div>
+      <fieldset class="border-picker followup-fields"><legend>Tratamiento del contorno</legend><div class="choice-row choice-three"><div class="choice"><input id="border-white" type="radio" name="sticker-border" value="Borde blanco" checked><label for="border-white">Borde blanco</label></div><div class="choice"><input id="border-color" type="radio" name="sticker-border" value="Borde de color"><label for="border-color">Borde de color</label></div><div class="choice"><input id="border-bleed" type="radio" name="sticker-border" value="Sin borde"><label for="border-bleed">Sin borde*</label></div></div><small>*Sujeto a que el arte permita impresión al borde.</small></fieldset>
+    </section>
+
+    <section class="builder-card">
+      <div class="builder-heading"><span class="number">3</span><div><h2>Tamaño, cantidad y acabado</h2><p>Prueba una configuración inicial para preparar la cotización.</p></div></div>
+      <div class="size-preset-row" role="group" aria-label="Tamaños sugeridos"><button type="button" data-sticker-size="2,2">2″</button><button class="is-active" type="button" data-sticker-size="3,3">3″</button><button type="button" data-sticker-size="4,4">4″</button><button type="button" data-sticker-size="custom">Personalizado</button></div>
+      <div class="field-grid followup-fields">
+        <div class="field"><label for="sticker-width">Ancho aproximado</label><div class="input-unit"><input id="sticker-width" type="number" min=".5" step=".25" value="3" data-summary-source="sticker-width"><span>″</span></div></div>
+        <div class="field"><label for="sticker-height">Alto aproximado</label><div class="input-unit"><input id="sticker-height" type="number" min=".5" step=".25" value="3" data-summary-source="sticker-height"><span>″</span></div></div>
+        <div class="field"><label for="sticker-qty">Cantidad</label><select id="sticker-qty" data-summary-source="sticker-qty"><option>10</option><option>25</option><option selected>50</option><option>100</option><option>Otra cantidad</option></select></div>
+        <fieldset class="option-field"><legend>Acabado</legend><div class="choice-row finish-row"><div class="choice"><input id="sticker-matte" type="radio" name="sticker-finish" value="Matte" checked><label for="sticker-matte">Matte</label></div><div class="choice"><input id="sticker-glossy" type="radio" name="sticker-finish" value="Glossy"><label for="sticker-glossy">Glossy</label></div><div class="choice"><input id="sticker-reflective" type="radio" name="sticker-finish" value="Reflective"><label for="sticker-reflective">Reflective</label></div></div></fieldset>
+      </div>
+    </section>
+
+    <section class="builder-card">
+      <div class="builder-heading"><span class="number">4</span><div><h2>Revisa tu solicitud</h2><p>El arte, contorno y precio se confirman en la prueba.</p></div></div>
+      <div class="field"><label for="sticker-notes">Notas para diseño</label><textarea id="sticker-notes" placeholder="Cuéntanos si deseas un color de borde, varios diseños o alguna consideración especial."></textarea></div>
+      <div class="live-summary compact-summary"><div><span>Formato</span><strong data-summary="sticker-format">Die-cut</strong></div><div><span>Tamaño</span><strong data-summary-combined="sticker-size">3″ × 3″</strong></div><div><span>Cantidad</span><strong data-summary="sticker-qty">50</strong></div><div><span>Acabado</span><strong data-summary="sticker-finish">Matte</strong></div></div>
+      <div class="truth-note"><strong>Prueba antes de imprimir</strong><p>Confirmamos el arte, tamaño exacto, línea de corte, presentación, acabado, precio y tiempo antes de producir.</p></div>
+      <button class="primary-button full-button" type="button" data-prototype-submit>Solicitar mi prueba y cotización</button><p class="prototype-status" data-prototype-status aria-live="polite"></p>
+    </section>
+  </form>
+
+  <section class="experience-section comparison-section"><div class="section-heading"><p class="eyebrow">De archivo a Sticker</p><h2>Nos ocupamos de la preparación técnica.</h2></div><div class="value-strip"><div><b>01</b><strong>Revisamos</strong><span>Resolución, proporción y legibilidad.</span></div><div><b>02</b><strong>Preparamos</strong><span>Contorno y presentación para tu prueba.</span></div><div><b>03</b><strong>Producimos</strong><span>Solo después de tu aprobación.</span></div></div></section>
+  <section class="faq-section"><div class="section-heading"><p class="eyebrow">Preguntas frecuentes</p><h2>Antes de ordenar</h2></div><details><summary>¿Qué archivo debo subir?</summary><p>Usa la imagen de mayor resolución disponible. PNG con transparencia facilita preparar el contorno; JPG y WebP también sirven como referencia.</p></details><details><summary>¿Qué diferencia hay entre die-cut y kiss-cut?</summary><p>Die-cut sigue la silueta exterior de la pieza; kiss-cut mantiene un respaldo más grande alrededor que facilita despegarla.</p></details><details><summary>¿El tamaño del preview es definitivo?</summary><p>No. Mantendremos la proporción del arte y confirmaremos las medidas exactas en la prueba para evitar estirarlo o deformarlo.</p></details></section>
+</div></main>
+<footer class="site-footer"><div class="footer-accent" aria-hidden="true"></div><div class="footer-inner"><div class="footer-brand"><a class="footer-wordmark" href="preview.html">D Creations</a><p>Diseñamos, imprimimos y fabricamos piezas personalizadas que convierten ideas en algo real.</p><a class="footer-cta" href="contact.html">Comienza tu proyecto <span aria-hidden="true">→</span></a></div><nav class="footer-links"><h2>Productos</h2><a href="labels.html">Labels</a><a href="nfc-keychains.html">NFC Keychains</a><a href="qr-codes.html">QR Codes</a><a href="3d-tags.html">3D Tags</a><a href="3d-prints.html">3D Prints</a><a href="stickers.html">Stickers</a></nav><nav class="footer-links"><h2>D Creations</h2><a href="services.html">Servicios creativos</a><a href="about.html">About Us</a><a href="contact.html">Contact Us</a></nav></div><div class="footer-bottom"><span>© 2026 D Creations</span><span class="footer-origin">Diseñado y producido en Puerto Rico</span><a href="contact.html">Hablemos</a></div></footer>
+<script src="assets/product-studio.js"></script>
+</body></html>

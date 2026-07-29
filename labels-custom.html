@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Labels Personalizados — D Creations</title>
+  <link rel="stylesheet" href="assets/site-pages.css"><link rel="stylesheet" href="assets/product-studio.css">
+</head>
+<body>
+  <header class="page-topbar"><div class="page-shell page-brand"><a href="preview.html"><img src="assets/d-creations-logo-transparent.png" alt="D Creations"></a><nav class="page-menu"><a href="preview.html#products">Productos</a><a href="services.html">Servicios</a><a href="about.html">About Us</a><a href="contact.html">Contact Us</a></nav></div></header>
+  <main class="studio-main" data-labels-builder><div class="studio-shell">
+    <header class="studio-title"><p class="eyebrow">Configurador de Labels</p><h1>Labels Personalizados</h1><p class="lead"><strong>Diseña tus Labels personalizados en vinyl adhesivo de alta calidad, larga durabilidad y a prueba de agua.</strong><br>Diferentes acabados para escoger.</p></header>
+    <section class="studio-panel studio-intro">
+      <div><p class="eyebrow">Crea paso a paso</p><h2>Tu idea, organizada y lista para producir.</h2><p>Sube tu inspiración, describe el estilo y decide exactamente qué información quieres en el Label. Revisaremos todo antes de producir.</p></div>
+      <img src="assets/product-labels-personalizados-real-studio.png" alt="Labels personalizados D Creations aplicados a materiales reales">
+    </section>
+    <form class="builder" action="contact.html" method="get">
+      <section class="builder-card">
+        <div class="builder-heading"><span class="number">1</span><div><h2>Sube tu diseño o inspiración</h2><p>Selecciona una imagen clara de tu arte, tema o inspiración. Solo se aceptan archivos de imagen.</p></div></div>
+        <div class="dropzone"><div><input type="file" accept="image/*" data-file-input data-preview="labels-custom-preview"><div class="file-preview" id="labels-custom-preview"></div></div></div>
+      </section>
+      <section class="builder-card">
+        <div class="builder-heading"><span class="number">2</span><div><h2>Cuéntanos qué quieres crear</h2><p>Describe claramente el tema, colores o detalles que deseas.</p></div></div>
+        <div class="field"><label for="label-description">Descripción de personalización</label><textarea id="label-description" name="descripcion" placeholder="Ej. tema de dinosaurios, colores verde y azul, estilo divertido"></textarea></div>
+        <div style="height:1.25rem"></div>
+        <div class="builder-heading" style="grid-template-columns:1fr"><div><h2>Organiza las líneas de tus Labels</h2><p>Usa las flechas para cambiar el orden. Puedes borrar todas las líneas si deseas un diseño sin contenido.</p></div></div>
+        <div class="line-list" data-line-list>
+          <div class="line-row"><div class="field"><label>Línea</label><input name="campo-nombre" value="Nombre"></div><div class="field"><label>Texto</label><input name="nombre" placeholder="Ej. Bella Díaz"></div><div class="line-actions"><button class="icon-button" type="button" data-move-up aria-label="Mover arriba">↑</button><button class="icon-button" type="button" data-move-down aria-label="Mover abajo">↓</button><button class="icon-button" type="button" data-remove-line aria-label="Borrar línea">×</button></div></div>
+          <div class="line-row"><div class="field"><label>Línea</label><input name="campo-grado" value="Grado"></div><div class="field"><label>Texto</label><input name="grado" placeholder="Ej. 4to grado"></div><div class="line-actions"><button class="icon-button" type="button" data-move-up aria-label="Mover arriba">↑</button><button class="icon-button" type="button" data-move-down aria-label="Mover abajo">↓</button><button class="icon-button" type="button" data-remove-line aria-label="Borrar línea">×</button></div></div>
+        </div>
+        <button class="add-line" type="button" data-add-line>＋ Añadir otro campo</button>
+      </section>
+      <section class="builder-card">
+        <div class="builder-heading"><span class="number">3</span><div><h2>Tamaño</h2><p>El preview mantiene la proporción física real de cada Label.</p></div></div>
+        <div class="size-preview"><strong>PREVIEW</strong><div class="size-shape-wrap"><div class="size-shape" data-size-shape></div></div><div class="size-caption"><strong data-size-measurement></strong><span data-size-use></span></div></div>
+        <div class="choice-row">
+          <div class="choice"><input id="size-large" type="radio" name="label-size" value="large" checked><label for="size-large">Large</label></div>
+          <div class="choice"><input id="size-medium" type="radio" name="label-size" value="medium"><label for="size-medium">Medium</label></div>
+          <div class="choice"><input id="size-small" type="radio" name="label-size" value="small"><label for="size-small">Small</label></div>
+          <div class="choice"><input id="size-mini" type="radio" name="label-size" value="mini"><label for="size-mini">Mini</label></div>
+        </div>
+      </section>
+      <section class="builder-card">
+        <div class="builder-heading"><span class="number">4</span><div><h2>Acabado</h2><p>Escoge la apariencia final de tus Labels.</p></div></div>
+        <div class="choice-row finish-row">
+          <div class="choice"><input id="finish-matte" type="radio" name="label-finish" value="matte" checked><label for="finish-matte">Matte</label></div>
+          <div class="choice"><input id="finish-glossy" type="radio" name="label-finish" value="glossy"><label for="finish-glossy">Glossy</label></div>
+          <div class="choice"><input id="finish-reflective" type="radio" name="label-finish" value="reflective"><label for="finish-reflective">Reflective</label></div>
+        </div>
+      </section>
+      <section class="builder-card">
+        <div class="builder-heading"><span class="number">5</span><div><h2>Confirmación</h2><p>Confirma tu selección antes de continuar.</p></div></div>
+        <div class="summary-grid"><div class="summary-item"><span>Tamaño</span><strong data-summary-size>Large</strong></div><div class="summary-item"><span>Acabado</span><strong data-summary-finish>Matte</strong></div><div class="summary-item"><span>Precio desde</span><strong data-summary-price>$2.00</strong></div></div>
+        <h3>Condiciones</h3>
+        <ol class="terms"><li>Se enviarán dos diseños de prueba para escoger uno de ellos.</li><li>Luego de escogerlo, se hará una revisión adicional si es necesaria.</li><li>Revisiones adicionales tendrán costo adicional.</li></ol>
+        <p><strong>La producción comienza después de aprobar el diseño/prueba.</strong></p>
+        <input type="hidden" name="product" value="labels-personalizados"><button class="primary-button" type="submit">Continuar con mi pedido</button>
+      </section>
+    </form>
+  </div></main>
+  <footer class="site-footer"><div class="footer-accent" aria-hidden="true"></div><div class="footer-inner"><div class="footer-brand"><a class="footer-wordmark" href="preview.html">D Creations</a><p>Diseñamos, imprimimos y fabricamos piezas personalizadas que convierten ideas en algo real.</p><a class="footer-cta" href="contact.html">Comienza tu proyecto <span aria-hidden="true">→</span></a></div><nav class="footer-links" aria-label="Productos"><h2>Productos</h2><a href="labels.html">Labels</a><a href="nfc-keychains.html">NFC Keychains</a><a href="qr-codes.html">QR Codes</a><a href="3d-tags.html">3D Tags</a><a href="3d-prints.html">3D Prints</a><a href="stickers.html">Stickers</a></nav><nav class="footer-links" aria-label="D Creations"><h2>D Creations</h2><a href="services.html">Servicios creativos</a><a href="about.html">About Us</a><a href="contact.html">Contact Us</a><a href="preview.html#products">Todos los productos</a></nav></div><div class="footer-bottom"><span>© 2026 D Creations</span><span class="footer-origin">Diseñado y producido en Puerto Rico</span><a href="contact.html">Hablemos</a></div></footer>
+  <script src="assets/product-studio.js"></script>
+</body>
+</html>
