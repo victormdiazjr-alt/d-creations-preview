@@ -212,7 +212,8 @@ function bindProductBuilders() {
       if (combined && width && height) combined.textContent = `${width}″ × ${height}″`;
       const completed = $$('input:checked,textarea:not(:placeholder-shown),input:not([type="radio"]):not([type="file"])', root).length;
       const progress = $('[data-progress]', root);
-      if (progress) progress.textContent = String(Math.min(4, Math.max(1, Math.ceil(completed / 3))));
+      const progressTotal = Number(root.dataset.progressTotal) || 4;
+      if (progress) progress.textContent = String(Math.min(progressTotal, Math.max(1, Math.ceil(completed / 3))));
     };
     root.addEventListener('input', update);
     root.addEventListener('change', update);
@@ -229,6 +230,7 @@ function bindTagStudio() {
   const root = $('#tag-builder');
   if (!root) return;
   const preview = $('[data-tag-preview]', root);
+  const title = $('[data-tag-title]', root);
   const text = $('[data-tag-text]', root);
   const subtitle = $('[data-tag-subtitle]', root);
   const outputText = $('[data-tag-preview-text]', root);
@@ -237,14 +239,15 @@ function bindTagStudio() {
   const count = $('[data-tag-count]', root);
 
   const update = () => {
-    const type = selectedValue('tag-type', root) || 'Nombre';
     const color = $('input[name="tag-color"]:checked', root);
-    outputText.textContent = text.value.trim() || (type === 'Logo' ? 'Tu logo' : type === 'Tema' ? 'Tu tema' : 'Tu nombre');
-    outputSubtitle.textContent = subtitle.value.trim() || '3D TAG';
-    outputType.textContent = type;
-    count.textContent = String(text.value.length);
-    preview.style.setProperty('--tag-bg', color?.dataset.bg || '#7045d8');
-    preview.style.setProperty('--tag-fg', color?.dataset.fg || '#ffffff');
+    if (outputText) outputText.textContent = text?.value.trim() || 'Tu nombre';
+    if (outputSubtitle) outputSubtitle.textContent = subtitle?.value.trim() || 'Tu grado';
+    if (outputType) outputType.textContent = title?.value.trim() || 'Por definir';
+    if (count) count.textContent = String(text?.value.length || 0);
+    if (preview) {
+      preview.style.setProperty('--tag-bg', color?.dataset.bg || '#7045d8');
+      preview.style.setProperty('--tag-fg', color?.dataset.fg || '#ffffff');
+    }
   };
 
   root.addEventListener('input', update);

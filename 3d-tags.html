@@ -4,7 +4,7 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>3D Tags personalizados — D Creations</title>
   <meta name="description" content="Diseña un 3D Tag personalizado con nombre, logo o tema y revisa una prueba antes de producir.">
-  <link rel="stylesheet" href="assets/site-pages.css"><link rel="stylesheet" href="assets/product-studio.css">
+  <link rel="stylesheet" href="assets/site-pages.css"><link rel="stylesheet" href="assets/product-studio.css?v=20260806-3">
 </head>
 <body>
 <header class="page-topbar"><div class="page-shell page-brand"><a href="preview.html"><img src="assets/d-creations-logo-transparent.png" alt="D Creations"></a><nav class="page-menu" aria-label="Navegación principal"><a href="preview.html#products">Productos</a><a href="services.html">Servicios</a><a href="about.html">About Us</a><a href="contact.html">Contact Us</a></nav></div></header>
@@ -87,17 +87,8 @@
       </div>
     </section>
 
-    <section class="experience-section compact-section" aria-labelledby="tag-fit-title">
-      <div class="section-heading"><p class="eyebrow">Empieza por el resultado</p><h2 id="tag-fit-title">¿Qué quieres que destaque?</h2><p>Escoge una dirección. Puedes cambiarla dentro del estudio.</p></div>
-      <div class="use-case-grid">
-        <button class="use-case-card is-active" type="button" data-tag-preset="Nombre"><b>Nombre protagonista</b><span>Texto grande, contraste claro y lectura rápida.</span><em>Ideal para identificar</em></button>
-        <button class="use-case-card" type="button" data-tag-preset="Logo"><b>Logo de marca</b><span>Una adaptación tridimensional de tu identidad.</span><em>Ideal para negocios</em></button>
-        <button class="use-case-card" type="button" data-tag-preset="Tema"><b>Tema personalizado</b><span>Color y forma inspirados en una referencia.</span><em>Ideal para regalos</em></button>
-      </div>
-    </section>
-
-    <form id="tag-builder" class="workbench has-studio-sidebar" data-product-builder="tag" novalidate>
-      <div class="workbench-head"><div><p class="eyebrow">Diseñador interactivo</p><h2>Crea la dirección de tu Tag</h2><p>El preview es una guía. D Creations prepara y te envía la propuesta final para aprobación.</p></div><div class="progress-pill"><span data-progress>1</span> de 4</div></div>
+    <form id="tag-builder" class="workbench has-studio-sidebar" data-product-builder="tag" data-progress-total="2" novalidate>
+      <div class="workbench-head"><div><p class="eyebrow">Solicitud de diseño</p><h2>Cuéntanos cómo quieres tu 3D Tag</h2><p>Envíanos los datos y una imagen del tema. D Creations preparará la propuesta final para tu aprobación.</p></div><div class="progress-pill"><span data-progress>1</span> de 2</div></div>
 
       <aside class="studio-sidecard tag-preview-card" aria-live="polite">
         <span class="preview-badge">Preview en vivo</span>
@@ -105,53 +96,34 @@
           <div class="tag-ring" aria-hidden="true"></div>
           <div class="tag-preview-object" data-tag-preview>
             <span data-tag-preview-text>Tu nombre</span>
-            <small data-tag-preview-subtitle>3D TAG</small>
+            <small data-tag-preview-subtitle>Tu grado</small>
           </div>
         </div>
-        <div class="preview-meta"><span>Dirección</span><strong data-tag-preview-type>Nombre</strong></div>
-        <p>Color, espesor, medidas y accesorio se validan en la prueba.</p>
+        <div class="preview-meta"><span>Título</span><strong data-tag-preview-type>Por definir</strong></div>
+        <p>La forma, los colores y los detalles finales se confirman en la prueba visual.</p>
       </aside>
 
       <section class="builder-card">
-        <div class="builder-heading"><span class="number">1</span><div><h2>Elige la composición</h2><p>Define qué elemento debe dominar visualmente.</p></div></div>
-        <div class="visual-choice-grid">
-          <label class="visual-choice"><input type="radio" name="tag-type" value="Nombre" checked><span><b>Nombre</b><small>Texto como protagonista</small></span></label>
-          <label class="visual-choice"><input type="radio" name="tag-type" value="Logo"><span><b>Logo</b><small>Identidad de marca</small></span></label>
-          <label class="visual-choice"><input type="radio" name="tag-type" value="Tema"><span><b>Tema</b><small>Inspiración visual</small></span></label>
-          <label class="visual-choice"><input type="radio" name="tag-type" value="Combinado"><span><b>Combinado</b><small>Nombre + elemento</small></span></label>
-        </div>
-      </section>
-
-      <section class="builder-card">
-        <div class="builder-heading"><span class="number">2</span><div><h2>Personaliza el frente</h2><p>Escribe el texto y prueba una combinación de color.</p></div></div>
+        <div class="builder-heading"><span class="number">1</span><div><h2>Datos del Tag</h2><p>Escribe la información que quieres incluir en el diseño.</p></div></div>
         <div class="field-grid">
-          <div class="field"><label for="tag-name">Nombre o texto principal</label><input id="tag-name" name="tag-name" maxlength="32" placeholder="Ej. Sofía" data-summary-source="tag-name" data-tag-text><small><span data-tag-count>0</span>/32 caracteres</small></div>
-          <div class="field"><label for="tag-subtitle">Texto secundario opcional</label><input id="tag-subtitle" maxlength="22" placeholder="Ej. 4to grado" data-tag-subtitle></div>
+          <div class="field"><label for="tag-title">Título</label><input id="tag-title" name="tag-title" maxlength="40" placeholder="Ej. Tag escolar de dinosaurio" data-summary-source="tag-title" data-tag-title></div>
+          <div class="field"><label for="tag-name">Nombre</label><input id="tag-name" name="tag-name" maxlength="32" placeholder="Ej. Sofía" data-summary-source="tag-name" data-tag-text><small><span data-tag-count>0</span>/32 caracteres</small></div>
+          <div class="field"><label for="tag-grade">Grado</label><input id="tag-grade" name="tag-grade" maxlength="22" placeholder="Ej. 4to grado" data-tag-subtitle></div>
         </div>
-        <fieldset class="color-picker"><legend>Combinación inicial</legend><div class="swatch-row">
-          <label><input type="radio" name="tag-color" value="Violeta y rosa" data-bg="#7045d8" data-fg="#ffffff" checked><span style="--swatch:#7045d8"></span><small>Violeta</small></label>
-          <label><input type="radio" name="tag-color" value="Azul y blanco" data-bg="#147bd1" data-fg="#ffffff"><span style="--swatch:#147bd1"></span><small>Azul</small></label>
-          <label><input type="radio" name="tag-color" value="Rosa y negro" data-bg="#f2a2bc" data-fg="#19171b"><span style="--swatch:#f2a2bc"></span><small>Rosa</small></label>
-          <label><input type="radio" name="tag-color" value="Amarillo y negro" data-bg="#f5c542" data-fg="#17191e"><span style="--swatch:#f5c542"></span><small>Amarillo</small></label>
-        </div></fieldset>
       </section>
 
       <section class="builder-card">
-        <div class="builder-heading"><span class="number">3</span><div><h2>Añade la referencia</h2><p>Logo, dibujo, foto o inspiración: usa el archivo más claro que tengas.</p></div></div>
-        <div class="dropzone compact-dropzone"><div><strong>Arrastra o selecciona tu imagen</strong><p>JPG, PNG o WebP. Evita datos personales que no deban aparecer en la pieza.</p><input type="file" accept="image/*" data-file-input data-preview="tag-file-preview"></div></div>
+        <div class="builder-heading"><span class="number">2</span><div><h2>Imagen y descripción</h2><p>Sube una imagen clara del tema y explícanos cómo imaginas el resultado.</p></div></div>
+        <div class="dropzone compact-dropzone"><div><strong>Sube la imagen del tema</strong><p>JPG, PNG o WebP. Usa la referencia más clara que tengas.</p><input type="file" accept="image/jpeg,image/png,image/webp" data-file-input data-preview="tag-file-preview"></div></div>
         <div id="tag-file-preview" class="file-preview" aria-live="polite"></div>
-        <div class="field followup-fields"><label for="tag-description">Dirección creativa</label><textarea id="tag-description" placeholder="Cuéntanos el tema, estilo y detalles que no deben faltar."></textarea></div>
-      </section>
-
-      <section class="builder-card">
-        <div class="builder-heading"><span class="number">4</span><div><h2>Preferencias del proyecto</h2><p>Son una guía inicial; confirmaremos la configuración disponible.</p></div></div>
-        <div class="field-grid">
-          <fieldset class="option-field"><legend>Escala preferida</legend><div class="choice-row choice-three"><div class="choice"><input id="tag-size-s" type="radio" name="tag-size" value="Compacto"><label for="tag-size-s">Compacto</label></div><div class="choice"><input id="tag-size-m" type="radio" name="tag-size" value="Mediano" checked><label for="tag-size-m">Mediano</label></div><div class="choice"><input id="tag-size-l" type="radio" name="tag-size" value="Grande"><label for="tag-size-l">Grande</label></div></div></fieldset>
-          <fieldset class="option-field"><legend>Presentación preferida</legend><div class="choice-row choice-three"><div class="choice"><input id="tag-attach-cord" type="radio" name="tag-attachment" value="Cordón" checked><label for="tag-attach-cord">Cordón</label></div><div class="choice"><input id="tag-attach-ring" type="radio" name="tag-attachment" value="Aro"><label for="tag-attach-ring">Aro</label></div><div class="choice"><input id="tag-attach-none" type="radio" name="tag-attachment" value="Sin accesorio"><label for="tag-attach-none">Sin accesorio</label></div></div></fieldset>
+        <div class="field followup-fields"><label for="tag-description">Descripción</label><textarea id="tag-description" name="tag-description" placeholder="Describe el tema, estilo o idea principal que quieres para el Tag."></textarea></div>
+        <div class="field followup-fields"><label for="tag-notes">Información adicional <span>(opcional)</span></label><textarea id="tag-notes" name="tag-notes" placeholder="Añade cualquier otro detalle que debamos considerar."></textarea></div>
+        <div class="live-summary compact-summary">
+          <div><span>Título</span><strong data-summary="tag-title">Por definir</strong></div>
+          <div><span>Nombre</span><strong data-summary="tag-name">Por definir</strong></div>
         </div>
-        <div class="live-summary compact-summary"><div><span>Concepto</span><strong data-summary="tag-type">Nombre</strong></div><div><span>Texto</span><strong data-summary="tag-name">Por definir</strong></div><div><span>Escala</span><strong data-summary="tag-size">Mediano</strong></div><div><span>Presentación</span><strong data-summary="tag-attachment">Cordón</strong></div></div>
-        <div class="truth-note"><strong>Tu compra no entra a producción a ciegas</strong><p>Primero confirmamos diseño, medidas, colores, accesorio, precio y tiempo. Luego recibes una prueba visual para aprobar.</p></div>
-        <button class="primary-button full-button" type="button" data-prototype-submit>Enviar mi concepto</button><p class="prototype-status" data-prototype-status aria-live="polite"></p>
+        <div class="truth-note"><strong>Revisamos todo antes de producir</strong><p>Confirmamos el diseño, los detalles, el precio y el tiempo. Luego recibes una prueba visual para aprobar.</p></div>
+        <button class="primary-button full-button" type="button" data-prototype-submit>Enviar solicitud de diseño</button><p class="prototype-status" data-prototype-status aria-live="polite"></p>
       </section>
     </form>
 
@@ -160,5 +132,5 @@
   </div>
 </main>
 <footer class="site-footer"><div class="footer-accent" aria-hidden="true"></div><div class="footer-inner"><div class="footer-brand"><a class="footer-wordmark" href="preview.html">D Creations</a><p>Diseñamos, imprimimos y fabricamos piezas personalizadas que convierten ideas en algo real.</p><a class="footer-cta" href="contact.html">Comienza tu proyecto <span aria-hidden="true">→</span></a></div><nav class="footer-links"><h2>Productos</h2><a href="labels.html">Labels</a><a href="nfc-keychains.html">NFC Keychains</a><a href="qr-codes.html">QR Codes</a><a href="3d-tags.html">3D Tags</a><a href="3d-prints.html">3D Prints</a><a href="stickers.html">Stickers</a></nav><nav class="footer-links"><h2>D Creations</h2><a href="services.html">Servicios creativos</a><a href="about.html">About Us</a><a href="contact.html">Contact Us</a></nav></div><div class="footer-bottom"><span>© 2026 D Creations</span><span class="footer-origin">Diseñado y producido en Puerto Rico</span><a href="contact.html">Hablemos</a></div></footer>
-<script src="assets/product-studio.js"></script>
+<script src="assets/product-studio.js?v=20260806-3"></script>
 </body></html>
