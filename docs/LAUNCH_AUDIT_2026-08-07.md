@@ -1,0 +1,102 @@
+# D Creations — Auditoría de lanzamiento
+
+Fecha: 7 de agosto de 2026 (AST)
+
+## Resumen ejecutivo
+
+La tienda tiene dominio, correo, catálogo y una configuración básica de envío. No está lista para aceptar pedidos reales porque Shopify Payments no está activado, faltan políticas esenciales y el tema publicado es anterior a la versión visual aprobada del 29 de julio.
+
+La tienda debe permanecer protegida por contraseña hasta completar el tema Shopify, la configuración fiscal y financiera, y las pruebas de compra.
+
+## Shopify
+
+### Confirmado
+
+- Tienda: D Creations.
+- Dominio principal: `dcreationspr.com`.
+- Dominios conectados: `dcreationspr.com`, `www.dcreationspr.com`, `f1w0ga-jy.myshopify.com` y `d-creations-3d.myshopify.com`.
+- Moneda: USD.
+- Zona horaria: Puerto Rico (GMT-04:00).
+- Sistema de medidas: imperial; peso predeterminado en libras.
+- Correo y teléfono de contacto: `info@dcreationspr.com` y `7872225712`.
+- Ubicación de cumplimiento: Portal de los Pinos, San Juan, Puerto Rico 00926.
+- Los productos físicos no se marcan automáticamente como cumplidos.
+- Los pedidos terminados se archivan automáticamente.
+- Mercado activo: Estados Unidos, que incluye Puerto Rico.
+- La tienda continúa protegida por contraseña.
+
+### Tema
+
+- Tema publicado: `D Creations - Dev v1`, guardado el 15 de julio, Horizon 4.1.0.
+- Tema borrador: `D Creations - Dev v2`, guardado el 22 de julio, Horizon 4.1.0.
+- La versión visual aprobada del 29 de julio existe solamente como build estático recuperado.
+- Acción requerida: reconstruir esa versión como tema Shopify OS 2.0 y probarla como tema borrador antes de publicar.
+
+### Pagos
+
+- Shopify Payments no está configurado.
+- Shopify exige autenticación de dos pasos antes de añadir una cuenta bancaria.
+- La entidad comercial aparece como `My Store - entity`; debe sustituirse o confirmarse con la identidad legal correcta.
+- Falta completar la incorporación financiera con datos del propietario y la cuenta de desembolso.
+- No activar pagos reales hasta completar pedidos de prueba.
+
+### Envíos
+
+- Perfil general aplicado a todos los productos.
+- Zona doméstica: Estados Unidos.
+- Envío Economy gratis para pedidos de $50 o más.
+- Economy: $4.90 para 0–5 lb y $19.90 para 5–70 lb.
+- Standard: $6.90 para 0–1 lb y $9.90 para 1–5 lb.
+- Existe una zona internacional con tarifas calculadas de DHL/USPS, pero no está incluida en un mercado activo.
+- Recogido local: apagado.
+- Entrega local: apagada.
+- Acción requerida: confirmar tiempos de producción y si se mantendrán las tarifas actuales para Puerto Rico y Estados Unidos.
+
+### Impuestos
+
+- Shopify Tax aparece activo como servicio.
+- Estados Unidos aparece como `Not collecting`.
+- No se debe activar una obligación o tasa contributiva sin confirmar el registro y tratamiento de IVU con el propietario o su profesional contributivo.
+
+### Políticas
+
+- Política de privacidad: activada y automatizada.
+- Devoluciones y reembolsos: sin política.
+- Términos de servicio: sin política.
+- Política de envío: sin política.
+- Información de contacto legal: requerida.
+- Reglas de devolución y cancelación: no configuradas.
+
+## Correo y dominio
+
+### Google Workspace
+
+- Usuario `info@dcreationspr.com`: activo.
+- Nombre de la cuenta: D Creations.
+
+### Shopify Email
+
+- Correo remitente: `info@dcreationspr.com`.
+- Autenticación de dominio: autenticada.
+- Shopify indica que debe verificarse o añadirse un único registro DMARC válido.
+- Consulta DNS pública del 7 de agosto de 2026: no se publicó ningún TXT en el dominio raíz y no se encontró `_dmarc.dcreationspr.com`.
+- Consulta DNS pública del 7 de agosto de 2026: el MX apunta a `smtp.google.com`.
+- Acción requerida: publicar y validar SPF, DKIM de Google Workspace y un único DMARC. No endurecer DMARC más allá de `p=none` hasta confirmar que todas las fuentes legítimas firman correctamente.
+
+### Network Solutions
+
+- Acceso administrativo confirmado para `dcreationspr.com`.
+- El panel muestra una advertencia de que falta un método de pago en la cuenta.
+- DNS web confirmado públicamente: el dominio raíz apunta a `23.227.38.65` y `www` apunta a `shops.myshopify.com`.
+- Acción requerida del propietario: añadir un método de pago válido y confirmar renovación automática del dominio, sin compartir los datos financieros en el chat.
+
+## Orden de cierre recomendado
+
+1. Reconstruir la versión visual aprobada como tema Shopify de prueba.
+2. Conectar productos, personalización, cargas de archivos, carrito y datos del pedido.
+3. Confirmar políticas, tiempos de producción y tarifas de envío.
+4. Verificar DMARC, MX, SPF/DKIM y entrega de correos.
+5. Confirmar tratamiento de IVU con el profesional contributivo.
+6. Activar autenticación de dos pasos y completar Shopify Payments con el propietario.
+7. Ejecutar pedidos de prueba y una transacción real de bajo valor con reembolso.
+8. Publicar el tema y quitar la contraseña solamente con aprobación final.

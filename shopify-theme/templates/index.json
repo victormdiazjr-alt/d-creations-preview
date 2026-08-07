@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "dc_home": {
+      "type": "dc-home",
+      "settings": {}
+    }
+  },
+  "order": ["dc_home"]
+}
