@@ -1,0 +1,21 @@
+{
+  "sections": {
+    "main": {
+      "type": "dc-page",
+      "blocks": {
+        "graphic": { "type": "card", "settings": { "heading": "Diseño gráfico", "text": "Identidad visual, artes personalizados y archivos preparados para impresión.", "link_label": "Solicitar diseño", "link": "/pages/contacto" } },
+        "modeling": { "type": "card", "settings": { "heading": "Diseño y modelado 3D", "text": "Conceptos y modelos personalizados preparados para una fabricación precisa.", "link_label": "Cotizar modelado", "link": "/pages/contacto" } }
+      },
+      "block_order": ["graphic", "modeling"],
+      "settings": {
+        "page_type": "content",
+        "kicker": "Servicios creativos",
+        "heading": "Diseñamos contigo.",
+        "lead": "Te acompañamos desde la primera idea hasta un arte o modelo listo para producir.",
+        "show_page_content": false
+      }
+    }
+  },
+  "order": ["main"]
+}
+

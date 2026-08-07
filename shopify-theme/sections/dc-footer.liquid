@@ -1,0 +1,47 @@
+{{ 'dc-shell.css' | asset_url | stylesheet_tag }}
+
+<div class="dc-footer">
+  <div class="dc-footer-accent" aria-hidden="true"></div>
+  <div class="dc-footer-inner">
+    <div class="dc-footer-brand">
+      <a class="dc-footer-wordmark" href="{{ routes.root_url }}">D Creations</a>
+      <p>{{ section.settings.description | escape }}</p>
+      <a class="dc-footer-cta" href="/pages/contacto">Comienza tu proyecto <span aria-hidden="true">→</span></a>
+    </div>
+    <nav class="dc-footer-links" aria-label="Productos">
+      <h2>Productos</h2>
+      <a href="/products/labels-personalizados">Labels</a>
+      <a href="/products/nfc-keychain-3d-personalizado">NFC Keychains</a>
+      <a href="/products/qr-code-impreso-personalizado">QR Codes</a>
+      <a href="/products/label-de-nombre-3d-personalizado-con-diseno">3D Tags</a>
+      <a href="/products/sticker-para-tumbler">Stickers</a>
+    </nav>
+    <nav class="dc-footer-links" aria-label="D Creations">
+      <h2>D Creations</h2>
+      <a href="/pages/servicios">Servicios creativos</a>
+      <a href="/pages/sobre-nosotros">Sobre nosotros</a>
+      <a href="/pages/contacto">Contacto</a>
+      <a href="{{ routes.root_url }}#products">Todos los productos</a>
+    </nav>
+  </div>
+  <div class="dc-footer-bottom">
+    <span>© {{ 'now' | date: '%Y' }} D Creations</span>
+    <span class="dc-footer-origin">Diseñado y producido en Puerto Rico</span>
+    <nav class="dc-footer-policies" aria-label="Políticas">
+      {% for policy in shop.policies %}
+        {% if policy != blank %}<a href="{{ policy.url }}">{{ policy.title | escape }}</a>{% endif %}
+      {% endfor %}
+      {% if shop.policies.size == 0 %}<a href="/pages/contacto">Hablemos</a>{% endif %}
+    </nav>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "D Creations — Pie",
+  "settings": [
+    { "type": "textarea", "id": "description", "label": "Descripción", "default": "Convertimos tus ideas en piezas únicas, diseñadas y producidas en Puerto Rico." }
+  ]
+}
+{% endschema %}
+

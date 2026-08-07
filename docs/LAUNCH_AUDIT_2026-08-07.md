@@ -26,19 +26,23 @@ La tienda debe permanecer protegida por contraseña hasta completar el tema Shop
 - Los pedidos terminados se archivan automáticamente.
 - Mercado activo: Estados Unidos, que incluye Puerto Rico.
 - La tienda continúa protegida por contraseña.
+- Nombre legal confirmado por el propietario: `Dcreations, LLC`.
+- Dirección autorizada para publicación: `San Juan, Puerto Rico` (sin dirección residencial completa).
 
 ### Tema
 
 - Tema publicado: `D Creations - Dev v1`, guardado el 15 de julio, Horizon 4.1.0.
 - Tema borrador: `D Creations - Dev v2`, guardado el 22 de julio, Horizon 4.1.0.
 - La versión visual aprobada del 29 de julio existe solamente como build estático recuperado.
-- Acción requerida: reconstruir esa versión como tema Shopify OS 2.0 y probarla como tema borrador antes de publicar.
+- El tema Shopify OS 2.0 ya reproduce la portada, el configurador personalizado, el encabezado, el pie y las páginas de Sobre nosotros, Servicios y Contacto.
+- Validación oficial: Shopify Theme Check inspeccionó 335 archivos sin encontrar infracciones.
+- El propietario autorizó subir el paquete como tema borrador el 7 de agosto de 2026. La publicación continúa prohibida hasta la aprobación final.
 
 ### Pagos
 
 - Shopify Payments no está configurado.
 - Shopify exige autenticación de dos pasos antes de añadir una cuenta bancaria.
-- La entidad comercial aparece como `My Store - entity`; debe sustituirse o confirmarse con la identidad legal correcta.
+- La entidad comercial aparece como `My Store - entity`; debe sustituirse por `Dcreations, LLC` durante la incorporación financiera.
 - Falta completar la incorporación financiera con datos del propietario y la cuenta de desembolso.
 - No activar pagos reales hasta completar pedidos de prueba.
 
@@ -46,18 +50,20 @@ La tienda debe permanecer protegida por contraseña hasta completar el tema Shop
 
 - Perfil general aplicado a todos los productos.
 - Zona doméstica: Estados Unidos.
-- Envío Economy gratis para pedidos de $50 o más.
+- Envío Economy gratis para pedidos de $50 o más sigue configurado, pero el propietario indicó que **no puede ofrecer envío gratis**; esta tarifa debe eliminarse antes de abrir la tienda.
 - Economy: $4.90 para 0–5 lb y $19.90 para 5–70 lb.
 - Standard: $6.90 para 0–1 lb y $9.90 para 1–5 lb.
 - Existe una zona internacional con tarifas calculadas de DHL/USPS, pero no está incluida en un mercado activo.
 - Recogido local: apagado.
-- Entrega local: apagada.
-- Acción requerida: confirmar tiempos de producción y si se mantendrán las tarifas actuales para Puerto Rico y Estados Unidos.
+- Entrega local: apagada. El propietario desea ofrecerla en áreas cercanas; falta definir radio o códigos postales, pedido mínimo, cargo y horario.
+- Tiempo de producción aprobado: 5–7 días laborables.
+- Acción requerida: registrar pesos y empaques reales, calcular tarifas antes de sustituir las actuales y eliminar el envío gratis.
 
 ### Impuestos
 
 - Shopify Tax aparece activo como servicio.
 - Estados Unidos aparece como `Not collecting`.
+- El propietario confirmó que Dcreations, LLC todavía no tiene registro de comerciante de Puerto Rico.
 - No se debe activar una obligación o tasa contributiva sin confirmar el registro y tratamiento de IVU con el propietario o su profesional contributivo.
 
 ### Políticas
@@ -68,6 +74,7 @@ La tienda debe permanecer protegida por contraseña hasta completar el tema Shop
 - Política de envío: sin política.
 - Información de contacto legal: requerida.
 - Reglas de devolución y cancelación: no configuradas.
+- El propietario aprobó: 5–7 días laborables de producción, siete días para informar daños/errores y la exclusión de devoluciones para personalizados después de aprobar la prueba, excepto defecto o error de D Creations.
 
 ## Correo y dominio
 
