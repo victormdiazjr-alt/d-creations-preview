@@ -15,6 +15,8 @@ La tienda debe permanecer protegida por contraseña hasta completar el tema Shop
 - Tienda: D Creations.
 - Dominio principal: `dcreationspr.com`.
 - Dominios conectados: `dcreationspr.com`, `www.dcreationspr.com`, `f1w0ga-jy.myshopify.com` y `d-creations-3d.myshopify.com`.
+- Verificación HTTPS: `dcreationspr.com` responde con Shopify y redirige a la página protegida; `www.dcreationspr.com` redirige canónicamente a `https://dcreationspr.com/`.
+- SSL/HSTS activos en el dominio público.
 - Moneda: USD.
 - Zona horaria: Puerto Rico (GMT-04:00).
 - Sistema de medidas: imperial; peso predeterminado en libras.
@@ -86,8 +88,8 @@ La tienda debe permanecer protegida por contraseña hasta completar el tema Shop
   - `google._domainkey` con la clave DKIM generada por Google Workspace.
   - `@` con `v=spf1 include:_spf.google.com ~all`.
   - `_dmarc` con `v=DMARC1; p=none; rua=mailto:info@dcreationspr.com; adkim=r; aspf=r; pct=100`.
-- DKIM ya era visible en DNS público al terminar la configuración; SPF y DMARC seguían en propagación.
-- Acción requerida: confirmar propagación pública de SPF y DMARC y revisar los reportes antes de endurecer DMARC más allá de `p=none`.
+- Verificación posterior: SPF, DKIM y DMARC quedaron visibles en los servidores autoritativos de Network Solutions y en los resolvers públicos de Cloudflare (`1.1.1.1`), Google (`8.8.8.8`) y Quad9 (`9.9.9.9`).
+- Acción futura: revisar los reportes recibidos en `info@dcreationspr.com` antes de endurecer DMARC más allá de `p=none`.
 
 ### Network Solutions
 
