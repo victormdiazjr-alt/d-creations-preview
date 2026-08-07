@@ -45,19 +45,22 @@ La tienda debe permanecer protegida por contraseña hasta completar el tema Shop
 - La entidad comercial aparece como `My Store - entity`; debe sustituirse por `Dcreations, LLC` durante la incorporación financiera.
 - Falta completar la incorporación financiera con datos del propietario y la cuenta de desembolso.
 - No activar pagos reales hasta completar pedidos de prueba.
+- La cuenta ofrece Shopify Payments con Shop Pay y tarjetas; el panel muestra tarifas desde 2.5% + $0.30 y exige primero completar la dirección comercial predeterminada.
+- El método de captura actual aparece como captura automática al realizarse el pedido. Debe verificarse nuevamente después de activar Shopify Payments.
 
 ### Envíos
 
 - Perfil general aplicado a todos los productos.
 - Zona doméstica: Estados Unidos.
-- Envío Economy gratis para pedidos de $50 o más sigue configurado, pero el propietario indicó que **no puede ofrecer envío gratis**; esta tarifa debe eliminarse antes de abrir la tienda.
+- La tarifa Economy gratis para pedidos de $50 o más fue eliminada y el perfil mostró `Profile updated` el 7 de agosto de 2026, siguiendo la decisión expresa del propietario.
 - Economy: $4.90 para 0–5 lb y $19.90 para 5–70 lb.
 - Standard: $6.90 para 0–1 lb y $9.90 para 1–5 lb.
 - Existe una zona internacional con tarifas calculadas de DHL/USPS, pero no está incluida en un mercado activo.
 - Recogido local: apagado.
 - Entrega local: apagada. El propietario desea ofrecerla en áreas cercanas; falta definir radio o códigos postales, pedido mínimo, cargo y horario.
 - Tiempo de producción aprobado: 5–7 días laborables.
-- Acción requerida: registrar pesos y empaques reales, calcular tarifas antes de sustituir las actuales y eliminar el envío gratis.
+- Acción requerida: registrar pesos y empaques reales y calcular tarifas antes de sustituir las actuales.
+- El único empaque configurado es `Sample box`, 8.6 × 5.4 × 1.6 pulgadas, con peso 0 lb. No debe usarse como base definitiva de tarifas calculadas.
 
 ### Impuestos
 
