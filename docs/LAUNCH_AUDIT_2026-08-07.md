@@ -32,11 +32,14 @@ La tienda debe permanecer protegida por contraseña hasta completar el tema Shop
 ### Tema
 
 - Tema publicado: `D Creations - Dev v1`, guardado el 15 de julio, Horizon 4.1.0.
-- Tema borrador: `D Creations - Dev v2`, guardado el 22 de julio, Horizon 4.1.0.
-- La versión visual aprobada del 29 de julio existe solamente como build estático recuperado.
+- Tema borrador anterior: `D Creations - Dev v2`, guardado el 22 de julio, Horizon 4.1.0.
+- Tema de prueba actual: `D Creations - V1 Test 2026-08-07`, ID `190372479293`, estado `unpublished`.
+- La versión visual aprobada del 29 de julio fue recuperada del build estático y adaptada a Shopify OS 2.0.
 - El tema Shopify OS 2.0 ya reproduce la portada, el configurador personalizado, el encabezado, el pie y las páginas de Sobre nosotros, Servicios y Contacto.
 - Validación oficial: Shopify Theme Check inspeccionó 335 archivos sin encontrar infracciones.
-- El propietario autorizó subir el paquete como tema borrador el 7 de agosto de 2026. La publicación continúa prohibida hasta la aprobación final.
+- El propietario autorizó la carga y el tema se subió correctamente como borrador el 7 de agosto de 2026. La publicación continúa prohibida hasta la aprobación final.
+- La página existente `Contact` fue actualizada a `Contacto`, con URL `/pages/contacto` y metadatos SEO en español.
+- La plantilla predeterminada ahora detecta `/pages/servicios` y `/pages/sobre-nosotros`, lo que permite usar sus diseños aunque esas páginas se creen mientras el tema anterior continúa publicado.
 
 ### Pagos
 

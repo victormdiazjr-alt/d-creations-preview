@@ -1,11 +1,31 @@
 {{ 'dc-page.css' | asset_url | stylesheet_tag }}
 
-<section class="dc-page">
-  {% if section.settings.kicker != blank %}<p class="dc-page-kicker">{{ section.settings.kicker | escape }}</p>{% endif %}
-  <h1>{{ section.settings.heading | escape }}</h1>
-  {% if section.settings.lead != blank %}<p class="dc-page-lead">{{ section.settings.lead | escape }}</p>{% endif %}
+{% liquid
+  assign dc_page_type = section.settings.page_type
+  assign dc_kicker = section.settings.kicker
+  assign dc_heading = section.settings.heading
+  assign dc_lead = section.settings.lead
 
-  {% case section.settings.page_type %}
+  case page.handle
+    when 'servicios'
+      assign dc_page_type = 'services'
+      assign dc_kicker = 'Servicios creativos'
+      assign dc_heading = 'Diseñamos contigo.'
+      assign dc_lead = 'Te acompañamos desde la primera idea hasta un arte o modelo listo para producir.'
+    when 'sobre-nosotros'
+      assign dc_page_type = 'about'
+      assign dc_kicker = 'Sobre D Creations'
+      assign dc_heading = 'Ideas hechas realidad.'
+      assign dc_lead = 'D Creations es un estudio creativo en Puerto Rico que une diseño, impresión y fabricación digital para convertir ideas personales y de negocio en piezas memorables.'
+  endcase
+%}
+
+<section class="dc-page">
+  {% if dc_kicker != blank %}<p class="dc-page-kicker">{{ dc_kicker | escape }}</p>{% endif %}
+  <h1>{{ dc_heading | escape }}</h1>
+  {% if dc_lead != blank %}<p class="dc-page-lead">{{ dc_lead | escape }}</p>{% endif %}
+
+  {% case dc_page_type %}
     {% when 'contact' %}
       {% form 'contact', class: 'dc-contact-form' %}
         {% if form.posted_successfully? %}
@@ -33,6 +53,31 @@
         </label>
         <button class="dc-page-action" type="submit">Enviar solicitud</button>
       {% endform %}
+    {% when 'services' %}
+      <div class="dc-page-grid">
+        <article class="dc-page-card">
+          <h2>Diseño gráfico</h2>
+          <p>Identidad visual, artes personalizados y archivos preparados para impresión.</p>
+          <a class="dc-page-action" href="/pages/contacto">Solicitar diseño</a>
+        </article>
+        <article class="dc-page-card">
+          <h2>Diseño y modelado 3D</h2>
+          <p>Conceptos y modelos personalizados preparados para una fabricación precisa.</p>
+          <a class="dc-page-action" href="/pages/contacto">Cotizar modelado</a>
+        </article>
+      </div>
+    {% when 'about' %}
+      <div class="dc-page-grid">
+        <article class="dc-page-card">
+          <h2>Diseñado contigo</h2>
+          <p>Escuchamos tu idea, preparamos una propuesta visual y revisamos los detalles antes de producir.</p>
+        </article>
+        <article class="dc-page-card">
+          <h2>Producido con intención</h2>
+          <p>Cuidamos la selección de materiales, el acabado y la presentación final de cada proyecto.</p>
+        </article>
+      </div>
+      <p><a class="dc-page-action" href="/pages/contacto">Cuéntanos tu idea</a></p>
     {% else %}
       {% if section.blocks.size > 0 %}
         <div class="dc-page-grid">
@@ -77,4 +122,3 @@
   "presets": [{ "name": "D Creations — Página" }]
 }
 {% endschema %}
-
