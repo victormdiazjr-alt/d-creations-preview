@@ -1,0 +1,68 @@
+{{ 'dc-home.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'dc-home.js' | asset_url }}" defer="defer"></script>
+
+{% liquid
+  assign labels_link = section.settings.labels_link | default: routes.all_products_collection_url
+  assign nfc_link = section.settings.nfc_link | default: routes.all_products_collection_url
+  assign qr_link = section.settings.qr_link | default: routes.all_products_collection_url
+  assign tags_link = section.settings.tags_link | default: routes.all_products_collection_url
+  assign stickers_link = section.settings.stickers_link | default: routes.all_products_collection_url
+  assign ready_link = section.settings.ready_link
+  assign plus_link = section.settings.plus_link
+  assign complete_link = section.settings.complete_link
+%}
+
+<d-creations-home class="dc-home">
+  <section class="dc-hero" aria-label="Productos destacados">
+    <article class="dc-slide is-active" data-dc-slide>
+      <picture><source media="(max-width: 800px)" srcset="{{ 'hero-labels-mobile-portrait-v1-1024x1536.png' | asset_url }}"><img src="{{ 'hero-labels-original-art-native-v3-2172x724.png' | asset_url }}" alt="Labels escolares personalizados" width="2172" height="724"></picture>
+      <div class="dc-slide__copy"><small>Labels personalizados</small><h1>Que todo vuelva a casa.</h1><p>Identifica libros, lápices y artículos escolares con Labels hechos para ellos.</p><a class="dc-button" href="{{ labels_link }}">Crear mis Labels</a></div>
+    </article>
+    <article class="dc-slide" data-dc-slide>
+      <picture><source media="(max-width: 800px)" srcset="{{ 'hero-nfc-mobile-portrait-v1-1024x1536.png' | asset_url }}"><img src="{{ 'hero-nfc-bubbly-layered-v15-2179x722.png' | asset_url }}" alt="Llavero NFC personalizado" width="2179" height="722"></picture>
+      <div class="dc-slide__copy"><small>NFC Keychain</small><h1>Tu página a un tap.</h1><p>Diseñamos, imprimimos y programamos tu llavero NFC personalizado.</p><a class="dc-button" href="{{ nfc_link }}">Diseñar mi NFC</a></div>
+    </article>
+    <article class="dc-slide" data-dc-slide>
+      <picture><source media="(max-width: 800px)" srcset="{{ 'hero-qr-mobile-portrait-v1-1024x1536.png' | asset_url }}"><img src="{{ 'hero-qr-native-wide-v2-2172x724.png' | asset_url }}" alt="Código QR personalizado para restaurante" width="2172" height="724"></picture>
+      <div class="dc-slide__copy"><small>QR para restaurantes</small><h1>Tu menú, listo para escanear.</h1><p>Diseñamos e imprimimos tu QR en vinyl para mesas y mostradores.</p><a class="dc-button" href="{{ qr_link }}">Crear mi QR</a></div>
+    </article>
+    <div class="dc-controls"><button class="dc-arrow" data-dc-direction="-1" aria-label="Anterior">←</button><button class="is-active" data-dc-index="0" aria-label="Labels" aria-current="true"></button><button data-dc-index="1" aria-label="NFC"></button><button data-dc-index="2" aria-label="QR"></button><button class="dc-arrow" data-dc-direction="1" aria-label="Siguiente">→</button></div>
+  </section>
+  <p class="dc-origin">Diseñado y producido en Puerto Rico</p>
+  <div class="dc-main"><div class="dc-inner">
+    <header class="dc-heading"><div><p class="dc-eyebrow">Productos D Creations</p><h2>Diseñado para destacar. Hecho para durar.</h2></div><p>Materiales de alta calidad, acabados resistentes y diseños creados con atención a cada detalle.</p></header>
+    <section class="dc-products" aria-label="Categorías de productos">
+      <a class="dc-product" href="{{ labels_link }}"><img src="{{ 'product-labels-real-studio-montage-v5.webp' | asset_url }}" alt="Labels personalizados" width="1200" height="1200" loading="lazy"><strong>Labels</strong></a>
+      <a class="dc-product" href="{{ nfc_link }}"><img src="{{ 'product-tile-nfc-segarra-aligned-v7.png' | asset_url }}" alt="NFC Keychains" width="1254" height="1254" loading="lazy"><strong>NFC Keychains</strong></a>
+      <a class="dc-product" href="{{ qr_link }}"><img src="{{ 'product-tile-qr-codes-v2.webp' | asset_url }}" alt="QR Codes" width="1200" height="1200" loading="lazy"><strong>QR Codes</strong></a>
+      <a class="dc-product" href="{{ tags_link }}"><img src="{{ 'product-3d-tags-real-complete-studio-montage-v5.webp' | asset_url }}" alt="Tags 3D" width="1200" height="1200" loading="lazy"><strong>3D Tags</strong></a>
+      <a class="dc-product" href="{{ stickers_link }}"><img src="{{ 'product-tile-stickers-v3.webp' | asset_url }}" alt="Stickers" width="1200" height="1200" loading="lazy"><strong>Stickers</strong></a>
+    </section>
+    <section class="dc-kits" aria-labelledby="dc-kits-title">
+      <div class="dc-kits__hero"><div class="dc-kits__copy"><p class="dc-eyebrow">Back to School Kits</p><h2 id="dc-kits-title">Todo identificado. Todo más fácil.</h2><p class="dc-kits__lead">Cuatro tamaños para cada uso: Large para libros, Medium para libretas, Small para materiales y Mini para lápices.</p><div class="dc-points"><span>Vinyl Heavy Duty</span><span>Diseño personalizado</span><span>Resistentes al agua</span></div></div><img class="dc-kits__image" src="{{ 'offers-labels-real-editorial-studio-v3.webp' | asset_url }}" alt="Kits de labels escolares" width="1200" height="1200" loading="lazy"></div>
+      <div class="dc-kit-grid">
+        <article class="dc-kit"><span class="dc-badge">Para comenzar</span><h3>Ready</h3><p class="dc-price">$29</p><ul><li>7 Labels Large</li><li>7 Labels Medium</li><li>7 Labels Small</li><li>50 Labels Mini</li><li>1 Sticker para Tumbler</li></ul>{% if ready_link != blank %}<a class="dc-button" href="{{ ready_link }}">Personalizar Ready</a>{% else %}<span class="dc-button is-disabled" aria-disabled="true">Disponible pronto</span>{% endif %}</article>
+        <article class="dc-kit is-featured"><span class="dc-badge">Recomendado</span><h3>Plus con Tag 3D</h3><p class="dc-price">$44</p><ul><li>10 Labels Large</li><li>15 Labels Medium</li><li>15 Labels Small</li><li>50 Labels Mini</li><li>1 Tag 3D personalizado</li></ul>{% if plus_link != blank %}<a class="dc-button" href="{{ plus_link }}">Personalizar Plus</a>{% else %}<span class="dc-button is-disabled" aria-disabled="true">Disponible pronto</span>{% endif %}</article>
+        <article class="dc-kit"><span class="dc-badge">Todo coordinado</span><h3>Complete con Tags 3D</h3><p class="dc-price">$64</p><ul><li>10 Labels Large</li><li>7 Franjas</li><li>15 Labels Medium</li><li>15 Labels Small</li><li>100 Labels Mini</li><li>2 Tags 3D personalizados</li></ul>{% if complete_link != blank %}<a class="dc-button" href="{{ complete_link }}">Personalizar Complete</a>{% else %}<span class="dc-button is-disabled" aria-disabled="true">Disponible pronto</span>{% endif %}</article>
+      </div>
+      <p class="dc-trust">Prueba de diseño antes de imprimir y atención personalizada.</p>
+    </section>
+  </div></div>
+</d-creations-home>
+
+{% schema %}
+{
+  "name": "D Creations Home",
+  "settings": [
+    {"type":"url","id":"labels_link","label":"Labels link"},
+    {"type":"url","id":"nfc_link","label":"NFC link"},
+    {"type":"url","id":"qr_link","label":"QR link"},
+    {"type":"url","id":"tags_link","label":"3D Tags link"},
+    {"type":"url","id":"stickers_link","label":"Stickers link"},
+    {"type":"url","id":"ready_link","label":"Ready kit link"},
+    {"type":"url","id":"plus_link","label":"Plus kit link"},
+    {"type":"url","id":"complete_link","label":"Complete kit link"}
+  ],
+  "presets": [{"name":"D Creations Home"}]
+}
+{% endschema %}

@@ -1,0 +1,17 @@
+{
+  "sections": {
+    "main": {
+      "type": "dc-page",
+      "settings": {
+        "page_type": "content",
+        "kicker": "D Creations",
+        "heading": "{{ page.title }}",
+        "lead": "",
+        "show_page_content": true
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

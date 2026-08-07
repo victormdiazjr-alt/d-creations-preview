@@ -1,0 +1,124 @@
+{{ 'dc-page.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign dc_page_type = section.settings.page_type
+  assign dc_kicker = section.settings.kicker
+  assign dc_heading = section.settings.heading
+  assign dc_lead = section.settings.lead
+
+  case page.handle
+    when 'servicios'
+      assign dc_page_type = 'services'
+      assign dc_kicker = 'Servicios creativos'
+      assign dc_heading = 'Diseñamos contigo.'
+      assign dc_lead = 'Te acompañamos desde la primera idea hasta un arte o modelo listo para producir.'
+    when 'sobre-nosotros'
+      assign dc_page_type = 'about'
+      assign dc_kicker = 'Sobre D Creations'
+      assign dc_heading = 'Ideas hechas realidad.'
+      assign dc_lead = 'D Creations es un estudio creativo en Puerto Rico que une diseño, impresión y fabricación digital para convertir ideas personales y de negocio en piezas memorables.'
+  endcase
+%}
+
+<section class="dc-page">
+  {% if dc_kicker != blank %}<p class="dc-page-kicker">{{ dc_kicker | escape }}</p>{% endif %}
+  <h1>{{ dc_heading | escape }}</h1>
+  {% if dc_lead != blank %}<p class="dc-page-lead">{{ dc_lead | escape }}</p>{% endif %}
+
+  {% case dc_page_type %}
+    {% when 'contact' %}
+      {% form 'contact', class: 'dc-contact-form' %}
+        {% if form.posted_successfully? %}
+          <p class="dc-form-status" role="status">Gracias. Recibimos tu solicitud y te responderemos a la brevedad.</p>
+        {% endif %}
+        {% if form.errors %}
+          <div class="dc-form-errors" role="alert">No pudimos enviar la solicitud. Revisa los campos marcados. {{ form.errors | default_errors }}</div>
+        {% endif %}
+        <label>Nombre
+          <input name="contact[name]" value="{{ form.name | escape }}" autocomplete="name" required>
+        </label>
+        <label>Email
+          <input type="email" name="contact[email]" value="{{ form.email | escape }}" autocomplete="email" required>
+        </label>
+        <label>Teléfono <span class="visually-hidden">(opcional)</span>
+          <input type="tel" name="contact[phone]" value="{{ form.phone | escape }}" autocomplete="tel">
+        </label>
+        <label>¿Qué deseas crear?
+          <select name="contact[producto_o_servicio]">
+            <option>Labels</option><option>NFC Keychain</option><option>QR Code</option><option>3D Tag</option><option>Stickers</option><option>Diseño gráfico</option><option>Diseño y modelado 3D</option><option>Otro</option>
+          </select>
+        </label>
+        <label class="dc-contact-message">Detalles
+          <textarea name="contact[body]" required>{{ form.body | escape }}</textarea>
+        </label>
+        <button class="dc-page-action" type="submit">Enviar solicitud</button>
+      {% endform %}
+    {% when 'services' %}
+      <div class="dc-page-grid">
+        <article class="dc-page-card">
+          <h2>Diseño gráfico</h2>
+          <p>Identidad visual, artes personalizados y archivos preparados para impresión.</p>
+          <a class="dc-page-action" href="/pages/contacto">Solicitar diseño</a>
+        </article>
+        <article class="dc-page-card">
+          <h2>Diseño y modelado 3D</h2>
+          <p>Conceptos y modelos personalizados preparados para una fabricación precisa.</p>
+          <a class="dc-page-action" href="/pages/contacto">Cotizar modelado</a>
+        </article>
+      </div>
+    {% when 'about' %}
+      <div class="dc-page-grid">
+        <article class="dc-page-card">
+          <h2>Diseñado contigo</h2>
+          <p>Escuchamos tu idea, preparamos una propuesta visual y revisamos los detalles antes de producir.</p>
+        </article>
+        <article class="dc-page-card">
+          <h2>Producido con intención</h2>
+          <p>Cuidamos la selección de materiales, el acabado y la presentación final de cada proyecto.</p>
+        </article>
+      </div>
+      <p><a class="dc-page-action" href="/pages/contacto">Cuéntanos tu idea</a></p>
+    {% else %}
+      {% if section.blocks.size > 0 %}
+        <div class="dc-page-grid">
+          {% for block in section.blocks %}
+            <article class="dc-page-card" {{ block.shopify_attributes }}>
+              <h2>{{ block.settings.heading | escape }}</h2>
+              <p>{{ block.settings.text | escape }}</p>
+              {% if block.settings.link_label != blank and block.settings.link != blank %}<a class="dc-page-action" href="{{ block.settings.link }}">{{ block.settings.link_label | escape }}</a>{% endif %}
+            </article>
+          {% endfor %}
+        </div>
+      {% endif %}
+      {% if section.settings.show_page_content and page.content != blank %}<div class="dc-page-rte rte">{{ page.content }}</div>{% endif %}
+      {% if section.settings.cta_label != blank and section.settings.cta_link != blank %}<p><a class="dc-page-action" href="{{ section.settings.cta_link }}">{{ section.settings.cta_label | escape }}</a></p>{% endif %}
+  {% endcase %}
+</section>
+
+{% schema %}
+{
+  "name": "D Creations — Página",
+  "settings": [
+    { "type": "select", "id": "page_type", "label": "Tipo", "options": [{"value":"content","label":"Contenido"},{"value":"contact","label":"Contacto"}], "default": "content" },
+    { "type": "text", "id": "kicker", "label": "Rótulo", "default": "D Creations" },
+    { "type": "text", "id": "heading", "label": "Título", "default": "Ideas hechas realidad." },
+    { "type": "textarea", "id": "lead", "label": "Introducción", "default": "Diseñamos contigo y cuidamos cada detalle hasta producir una pieza memorable." },
+    { "type": "checkbox", "id": "show_page_content", "label": "Mostrar contenido de la página", "default": true },
+    { "type": "text", "id": "cta_label", "label": "Texto del botón" },
+    { "type": "url", "id": "cta_link", "label": "Enlace del botón" }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Tarjeta",
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Título", "default": "Diseñado contigo" },
+        { "type": "textarea", "id": "text", "label": "Texto", "default": "Escuchamos tu idea y revisamos los detalles antes de producir." },
+        { "type": "text", "id": "link_label", "label": "Texto del enlace" },
+        { "type": "url", "id": "link", "label": "Enlace" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "D Creations — Página" }]
+}
+{% endschema %}

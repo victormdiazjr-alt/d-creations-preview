@@ -1,0 +1,14 @@
+{
+  "type": "header",
+  "name": "Header",
+  "sections": {
+    "dc_header": {
+      "type": "dc-header",
+      "settings": {
+        "announcement": "Creado y producido en Puerto Rico",
+        "sticky": true
+      }
+    }
+  },
+  "order": ["dc_header"]
+}

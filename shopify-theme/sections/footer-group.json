@@ -1,0 +1,13 @@
+{
+  "type": "footer",
+  "name": "Footer",
+  "sections": {
+    "dc_footer": {
+      "type": "dc-footer",
+      "settings": {
+        "description": "Convertimos tus ideas en piezas únicas, diseñadas y producidas en Puerto Rico."
+      }
+    }
+  },
+  "order": ["dc_footer"]
+}

@@ -1,0 +1,23 @@
+{
+  "sections": {
+    "main": {
+      "type": "dc-page",
+      "blocks": {
+        "designed": { "type": "card", "settings": { "heading": "Diseñado contigo", "text": "Escuchamos tu idea, preparamos una propuesta visual y revisamos los detalles antes de producir." } },
+        "intentional": { "type": "card", "settings": { "heading": "Producido con intención", "text": "Cuidamos la selección de materiales, el acabado y la presentación final de cada proyecto." } }
+      },
+      "block_order": ["designed", "intentional"],
+      "settings": {
+        "page_type": "content",
+        "kicker": "Sobre D Creations",
+        "heading": "Ideas hechas realidad.",
+        "lead": "D Creations es un estudio creativo en Puerto Rico que une diseño, impresión y fabricación digital para convertir ideas personales y de negocio en piezas memorables.",
+        "show_page_content": false,
+        "cta_label": "Cuéntanos tu idea",
+        "cta_link": "/pages/contacto"
+      }
+    }
+  },
+  "order": ["main"]
+}
+

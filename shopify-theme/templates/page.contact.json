@@ -1,0 +1,15 @@
+{
+  "sections": {
+    "main": {
+      "type": "dc-page",
+      "settings": {
+        "page_type": "contact",
+        "kicker": "Contacto",
+        "heading": "Cuéntanos tu idea.",
+        "lead": "Comparte los detalles de tu producto o proyecto. Usaremos esta información para orientarte sobre el próximo paso.",
+        "show_page_content": false
+      }
+    }
+  },
+  "order": ["main"]
+}

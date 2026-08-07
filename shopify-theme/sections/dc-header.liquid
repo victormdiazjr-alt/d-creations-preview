@@ -1,0 +1,61 @@
+{{ 'dc-shell.css' | asset_url | stylesheet_tag }}
+
+{% if section.settings.announcement != blank %}
+  <div class="dc-announcement">{{ section.settings.announcement | escape }}</div>
+{% endif %}
+<header class="dc-site-header{% if section.settings.sticky %} dc-site-header--sticky{% endif %}">
+  <div class="dc-header-inner">
+    <a class="dc-logo" href="{{ routes.root_url }}" aria-label="{{ shop.name | escape }} — Inicio">
+      {% if section.settings.logo != blank %}
+        {{ section.settings.logo | image_url: width: 320 | image_tag: widths: '160, 240, 320', loading: 'eager', alt: shop.name }}
+      {% else %}
+        <img src="{{ 'd-creations-logo-transparent.png' | asset_url }}" width="320" height="256" alt="{{ shop.name | escape }}">
+      {% endif %}
+    </a>
+
+    <nav class="dc-nav" aria-label="Navegación principal">
+      <ul class="dc-nav-list">
+        <li><a href="{{ routes.root_url }}#products">Productos</a></li>
+        <li><a href="/pages/servicios"{% if page.handle == 'servicios' %} aria-current="page"{% endif %}>Servicios</a></li>
+        <li><a href="/pages/sobre-nosotros"{% if page.handle == 'sobre-nosotros' %} aria-current="page"{% endif %}>Sobre nosotros</a></li>
+        <li><a href="/pages/contacto"{% if page.handle == 'contacto' %} aria-current="page"{% endif %}>Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="dc-header-actions">
+      <a class="dc-header-action dc-header-action--search" href="{{ routes.search_url }}" aria-label="Buscar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
+      </a>
+      {% if shop.customer_accounts_enabled %}
+        <a class="dc-header-action" href="{{ routes.account_url }}" aria-label="{% if customer %}Mi cuenta{% else %}Iniciar sesión{% endif %}">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4.5 21a7.5 7.5 0 0 1 15 0"></path></svg>
+        </a>
+      {% endif %}
+      <a class="dc-header-action" href="{{ routes.cart_url }}" aria-label="Carrito, {{ cart.item_count }} artículos">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2 12h10l2-8H7"></path><circle cx="9" cy="20" r="1"></circle><circle cx="17" cy="20" r="1"></circle></svg>
+        {% if cart.item_count > 0 %}<span class="dc-cart-count">{{ cart.item_count }}</span>{% endif %}
+      </a>
+      <details class="dc-mobile-nav">
+        <summary aria-label="Abrir menú"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></summary>
+        <nav class="dc-mobile-panel" aria-label="Navegación móvil">
+          <a href="{{ routes.root_url }}#products">Productos</a>
+          <a href="/pages/servicios">Servicios</a>
+          <a href="/pages/sobre-nosotros">Sobre nosotros</a>
+          <a href="/pages/contacto">Contacto</a>
+          <a href="{{ routes.search_url }}">Buscar</a>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "D Creations — Encabezado",
+  "settings": [
+    { "type": "image_picker", "id": "logo", "label": "Logo" },
+    { "type": "text", "id": "announcement", "label": "Anuncio", "default": "Creado y producido en Puerto Rico" },
+    { "type": "checkbox", "id": "sticky", "label": "Mantener visible al bajar", "default": true }
+  ]
+}
+{% endschema %}
