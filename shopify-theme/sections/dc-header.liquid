@@ -26,6 +26,11 @@
       <a class="dc-header-action dc-header-action--search" href="{{ routes.search_url }}" aria-label="Buscar">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
       </a>
+      {% if shop.customer_accounts_enabled %}
+        <a class="dc-header-action" href="{{ routes.account_url }}" aria-label="{% if customer %}Mi cuenta{% else %}Iniciar sesión{% endif %}">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4.5 21a7.5 7.5 0 0 1 15 0"></path></svg>
+        </a>
+      {% endif %}
       <a class="dc-header-action" href="{{ routes.cart_url }}" aria-label="Carrito, {{ cart.item_count }} artículos">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2 12h10l2-8H7"></path><circle cx="9" cy="20" r="1"></circle><circle cx="17" cy="20" r="1"></circle></svg>
         {% if cart.item_count > 0 %}<span class="dc-cart-count">{{ cart.item_count }}</span>{% endif %}
@@ -54,4 +59,3 @@
   ]
 }
 {% endschema %}
-
