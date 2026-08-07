@@ -16,7 +16,7 @@
     <nav class="dc-nav" aria-label="Navegación principal">
       <ul class="dc-nav-list">
         <li><a href="{{ routes.root_url }}#products">Productos</a></li>
-        <li><a href="/pages/servicios{% if request.design_mode %}?view=editor{% endif %}"{% if page.handle == 'servicios' %} aria-current="page"{% endif %}>Servicios</a></li>
+        <li><a href="/pages/servicios"{% if page.handle == 'servicios' %} aria-current="page"{% endif %}>Servicios</a></li>
         <li><a href="/pages/sobre-nosotros"{% if page.handle == 'sobre-nosotros' %} aria-current="page"{% endif %}>Sobre nosotros</a></li>
         <li><a href="/pages/contacto"{% if page.handle == 'contacto' %} aria-current="page"{% endif %}>Contacto</a></li>
       </ul>

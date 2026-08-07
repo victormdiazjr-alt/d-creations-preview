@@ -7,9 +7,9 @@
   assign qr_link = section.settings.qr_link | default: routes.all_products_collection_url
   assign tags_link = section.settings.tags_link | default: routes.all_products_collection_url
   assign stickers_link = section.settings.stickers_link | default: routes.all_products_collection_url
-  assign ready_link = section.settings.ready_link | default: routes.all_products_collection_url
-  assign plus_link = section.settings.plus_link | default: routes.all_products_collection_url
-  assign complete_link = section.settings.complete_link | default: routes.all_products_collection_url
+  assign ready_link = section.settings.ready_link
+  assign plus_link = section.settings.plus_link
+  assign complete_link = section.settings.complete_link
 %}
 
 <d-creations-home class="dc-home">
@@ -41,9 +41,9 @@
     <section class="dc-kits" aria-labelledby="dc-kits-title">
       <div class="dc-kits__hero"><div class="dc-kits__copy"><p class="dc-eyebrow">Back to School Kits</p><h2 id="dc-kits-title">Todo identificado. Todo más fácil.</h2><p class="dc-kits__lead">Cuatro tamaños para cada uso: Large para libros, Medium para libretas, Small para materiales y Mini para lápices.</p><div class="dc-points"><span>Vinyl Heavy Duty</span><span>Diseño personalizado</span><span>Resistentes al agua</span></div></div><img class="dc-kits__image" src="{{ 'offers-labels-real-editorial-studio-v3.webp' | asset_url }}" alt="Kits de labels escolares" width="1200" height="1200" loading="lazy"></div>
       <div class="dc-kit-grid">
-        <article class="dc-kit"><span class="dc-badge">Para comenzar</span><h3>Ready</h3><p class="dc-price">$29</p><ul><li>7 Labels Large</li><li>7 Labels Medium</li><li>7 Labels Small</li><li>50 Labels Mini</li><li>1 Sticker para Tumbler</li></ul><a class="dc-button" href="{{ ready_link }}">Personalizar Ready</a></article>
-        <article class="dc-kit is-featured"><span class="dc-badge">Recomendado</span><h3>Plus con Tag 3D</h3><p class="dc-price">$44</p><ul><li>10 Labels Large</li><li>15 Labels Medium</li><li>15 Labels Small</li><li>50 Labels Mini</li><li>1 Tag 3D personalizado</li></ul><a class="dc-button" href="{{ plus_link }}">Personalizar Plus</a></article>
-        <article class="dc-kit"><span class="dc-badge">Todo coordinado</span><h3>Complete con Tags 3D</h3><p class="dc-price">$64</p><ul><li>10 Labels Large</li><li>7 Franjas</li><li>15 Labels Medium</li><li>15 Labels Small</li><li>100 Labels Mini</li><li>2 Tags 3D personalizados</li></ul><a class="dc-button" href="{{ complete_link }}">Personalizar Complete</a></article>
+        <article class="dc-kit"><span class="dc-badge">Para comenzar</span><h3>Ready</h3><p class="dc-price">$29</p><ul><li>7 Labels Large</li><li>7 Labels Medium</li><li>7 Labels Small</li><li>50 Labels Mini</li><li>1 Sticker para Tumbler</li></ul>{% if ready_link != blank %}<a class="dc-button" href="{{ ready_link }}">Personalizar Ready</a>{% else %}<span class="dc-button is-disabled" aria-disabled="true">Disponible pronto</span>{% endif %}</article>
+        <article class="dc-kit is-featured"><span class="dc-badge">Recomendado</span><h3>Plus con Tag 3D</h3><p class="dc-price">$44</p><ul><li>10 Labels Large</li><li>15 Labels Medium</li><li>15 Labels Small</li><li>50 Labels Mini</li><li>1 Tag 3D personalizado</li></ul>{% if plus_link != blank %}<a class="dc-button" href="{{ plus_link }}">Personalizar Plus</a>{% else %}<span class="dc-button is-disabled" aria-disabled="true">Disponible pronto</span>{% endif %}</article>
+        <article class="dc-kit"><span class="dc-badge">Todo coordinado</span><h3>Complete con Tags 3D</h3><p class="dc-price">$64</p><ul><li>10 Labels Large</li><li>7 Franjas</li><li>15 Labels Medium</li><li>15 Labels Small</li><li>100 Labels Mini</li><li>2 Tags 3D personalizados</li></ul>{% if complete_link != blank %}<a class="dc-button" href="{{ complete_link }}">Personalizar Complete</a>{% else %}<span class="dc-button is-disabled" aria-disabled="true">Disponible pronto</span>{% endif %}</article>
       </div>
       <p class="dc-trust">Prueba de diseño antes de imprimir y atención personalizada.</p>
     </section>

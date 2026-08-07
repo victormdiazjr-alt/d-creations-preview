@@ -4,7 +4,8 @@
 
 - Mantener la tienda protegida por contraseña.
 - Subir el tema como borrador y confirmar que el tema publicado no cambia.
-- Asignar enlaces reales a Labels, NFC, QR, 3D Tags, Stickers y los tres kits desde el editor del tema.
+- Confirmar los enlaces ya mapeados de Labels, NFC, QR, 3D Tags y Stickers.
+- Asignar enlaces reales a los tres kits solamente después de conciliar sus nombres, composiciones y precios con el catálogo. Mientras estén sin asignar, muestran “Disponible pronto” y no envían al cliente a un producto incorrecto.
 - Asignar la plantilla `dcreations-personalized` a los productos que requieren información personalizada.
 - Activar “Requerir imagen de referencia” solamente en productos que no puedan producirse sin una imagen.
 
@@ -34,7 +35,7 @@
 - Verificar que las propiedades se mantienen al abrir y actualizar el carrito.
 - Probar código de descuento válido e inválido.
 - Confirmar tarifas para Puerto Rico y un estado continental.
-- Confirmar envío gratis desde $50 si el propietario lo aprueba.
+- Confirmar que no aparezca envío gratis; el propietario lo rechazó y la tarifa fue eliminada el 7 de agosto de 2026.
 - Confirmar que no se cobra impuesto hasta recibir la decisión contributiva.
 
 ## Notificaciones
@@ -69,4 +70,3 @@
 - Pagos, impuestos, envíos y contacto confirmados.
 - Cero enlaces o recursos rotos.
 - Contraseña retirada únicamente con aprobación del propietario.
-

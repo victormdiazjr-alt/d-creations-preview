@@ -28,10 +28,11 @@
     <span>© {{ 'now' | date: '%Y' }} D Creations</span>
     <span class="dc-footer-origin">Diseñado y producido en Puerto Rico</span>
     <nav class="dc-footer-policies" aria-label="Políticas">
+      {% assign has_dc_policy = false %}
       {% for policy in shop.policies %}
-        {% if policy != blank %}<a href="{{ policy.url }}">{{ policy.title | escape }}</a>{% endif %}
+        {% if policy != blank %}{% assign has_dc_policy = true %}<a href="{{ policy.url }}">{{ policy.title | escape }}</a>{% endif %}
       {% endfor %}
-      {% if shop.policies.size == 0 %}<a href="/pages/contacto">Hablemos</a>{% endif %}
+      {% unless has_dc_policy %}<a href="/pages/contacto">Hablemos</a>{% endunless %}
     </nav>
   </div>
 </div>
@@ -44,4 +45,3 @@
   ]
 }
 {% endschema %}
-
