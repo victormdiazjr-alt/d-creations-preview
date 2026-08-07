@@ -2,7 +2,13 @@
   "sections": {
     "dc_home": {
       "type": "dc-home",
-      "settings": {}
+      "settings": {
+        "labels_link": "/products/labels-personalizados",
+        "nfc_link": "/products/nfc-keychain-3d-personalizado",
+        "qr_link": "/products/qr-code-impreso-personalizado",
+        "tags_link": "/products/label-de-nombre-3d-personalizado-con-diseno",
+        "stickers_link": "/products/sticker-para-tumbler"
+      }
     }
   },
   "order": ["dc_home"]

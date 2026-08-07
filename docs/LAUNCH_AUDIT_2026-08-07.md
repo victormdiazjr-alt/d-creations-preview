@@ -73,15 +73,21 @@ La tienda debe permanecer protegida por contraseña hasta completar el tema Shop
 
 - Usuario `info@dcreationspr.com`: activo.
 - Nombre de la cuenta: D Creations.
+- DKIM de Google Workspace: clave RSA de 2048 bits generada y autenticación iniciada el 7 de agosto de 2026.
 
 ### Shopify Email
 
 - Correo remitente: `info@dcreationspr.com`.
 - Autenticación de dominio: autenticada.
 - Shopify indica que debe verificarse o añadirse un único registro DMARC válido.
-- Consulta DNS pública del 7 de agosto de 2026: no se publicó ningún TXT en el dominio raíz y no se encontró `_dmarc.dcreationspr.com`.
+- Estado inicial del 7 de agosto de 2026: no se publicaba SPF ni `_dmarc.dcreationspr.com`.
 - Consulta DNS pública del 7 de agosto de 2026: el MX apunta a `smtp.google.com`.
-- Acción requerida: publicar y validar SPF, DKIM de Google Workspace y un único DMARC. No endurecer DMARC más allá de `p=none` hasta confirmar que todas las fuentes legítimas firman correctamente.
+- Registros añadidos el 7 de agosto de 2026 en Network Solutions:
+  - `google._domainkey` con la clave DKIM generada por Google Workspace.
+  - `@` con `v=spf1 include:_spf.google.com ~all`.
+  - `_dmarc` con `v=DMARC1; p=none; rua=mailto:info@dcreationspr.com; adkim=r; aspf=r; pct=100`.
+- DKIM ya era visible en DNS público al terminar la configuración; SPF y DMARC seguían en propagación.
+- Acción requerida: confirmar propagación pública de SPF y DMARC y revisar los reportes antes de endurecer DMARC más allá de `p=none`.
 
 ### Network Solutions
 
